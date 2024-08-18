@@ -18,10 +18,10 @@ spec:
     spec:
       project: default
       sources:
-        - repoURL: https://github.com/twerthi/octopub.git
+        - repoURL: https://github.com/ATGardner/octopub.git
           targetRevision: HEAD
           path: codefresh/kustomize/envs/Development
-        - repoURL: https://github.com/twerthi/octopub.git
+        - repoURL: https://github.com/ATGardner/octopub.git
           targetRevision: HEAD
           path: codefresh/kustomize/octopub-secret/{{cluster}}/development
       destination:

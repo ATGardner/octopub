@@ -88,17 +88,17 @@ runs:
     # The Docker image is built and pushed.
     - name: Build, tag, and push image to Dockerhub
       run: |
-        docker build -t twerthi/octopub-frontend:${{ steps.determine_version.outputs.semVer }} .
-        docker push twerthi/octopub-frontend:${{ steps.determine_version.outputs.semVer }}
-        docker tag  twerthi/octopub-frontend:${{ steps.determine_version.outputs.semVer }} twerthi/octopub-frontend:latest
-        docker push twerthi/octopub-frontend:latest
+        docker build -t ATGardner/octopub-frontend:${{ steps.determine_version.outputs.semVer }} .
+        docker push ATGardner/octopub-frontend:${{ steps.determine_version.outputs.semVer }}
+        docker tag  ATGardner/octopub-frontend:${{ steps.determine_version.outputs.semVer }} ATGardner/octopub-frontend:latest
+        docker push ATGardner/octopub-frontend:latest
       shell: bash
       working-directory: js/frontend
 
     # The MySQL Docker image is built and pushed.
     # - name: Build, tag, and push image to Dockerhub
     #   run: |
-    #     docker buildx build -f Dockerfile -t twerthi/octopub-frontend:${{ steps.determine_version.outputs.semVer }} -t twerthi/octopub-frontend:latest --platform=linux/amd64,linux/arm64 --push .
+    #     docker buildx build -f Dockerfile -t ATGardner/octopub-frontend:${{ steps.determine_version.outputs.semVer }} -t ATGardner/octopub-frontend:latest --platform=linux/amd64,linux/arm64 --push .
     #   shell: bash
     #   working-directory: js/frontend
 
@@ -144,7 +144,7 @@ runs:
       uses: OctopusDeploy/push-build-information-action@v3
       with:
         packages: |
-          twerthi/octopub-frontend
+          ATGardner/octopub-frontend
         version: ${{ steps.determine_version.outputs.semVer }}
         server: ${{ inputs.octopus_server_url }}
         api_Key: ${{ inputs.octopus_api_key }}

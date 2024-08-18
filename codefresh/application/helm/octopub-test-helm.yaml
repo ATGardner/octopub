@@ -7,16 +7,16 @@ metadata:
 spec:
   project: default
   sources:
-    - repoURL: https://github.com/twerthi/octopub.git
+    - repoURL: https://github.com/ATGardner/octopub.git
       targetRevision: HEAD
       path: codefresh/helm/octopub-audits-mysql/test
-    - repoURL: https://github.com/twerthi/octopub.git
+    - repoURL: https://github.com/ATGardner/octopub.git
       targetRevision: HEAD
       path: codefresh/helm/octopub-products-mysql/test
-    - repoURL: https://github.com/twerthi/octopub.git
+    - repoURL: https://github.com/ATGardner/octopub.git
       targetRevision: HEAD
       path: codefresh/helm/octopub-frontend/test
-    - repoURL: https://github.com/twerthi/octopub.git
+    - repoURL: https://github.com/ATGardner/octopub.git
       targetRevision: HEAD
       path: codefresh/helm/octopub-secret/Test          
   destination:

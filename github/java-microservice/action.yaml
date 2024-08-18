@@ -158,7 +158,7 @@ runs:
     # - name: Build, tag, and push image to Dockerhub
     #   if: ${{ inputs.docker_build == 'true' }}
     #   run: |
-    #     docker buildx build -f src/main/docker/Dockerfile.legacy-jar -t twerthi/octopub-${{ inputs.service_directory }}-mysql:${{ steps.determine_version.outputs.semVer }} -t twerthi/octopub-${{ inputs.service_directory }}-mysql:latest --platform=linux/amd64,linux/arm64 --push .
+    #     docker buildx build -f src/main/docker/Dockerfile.legacy-jar -t ATGardner/octopub-${{ inputs.service_directory }}-mysql:${{ steps.determine_version.outputs.semVer }} -t ATGardner/octopub-${{ inputs.service_directory }}-mysql:latest --platform=linux/amd64,linux/arm64 --push .
     #   shell: bash
     #   working-directory: java/${{ inputs.service_directory }}
 
@@ -166,10 +166,10 @@ runs:
     - name: Build, tag, and push image to Dockerhub
       if: ${{ inputs.docker_build == 'true' }}
       run: |
-        docker build -f src/main/docker/Dockerfile.legacy-jar -t twerthi/octopub-${{ inputs.service_directory }}-mysql:${{ steps.determine_version.outputs.semVer }} .
-        docker push twerthi/octopub-${{ inputs.service_directory }}-mysql:${{ steps.determine_version.outputs.semVer }}
-        docker tag  twerthi/octopub-${{ inputs.service_directory }}-mysql:${{ steps.determine_version.outputs.semVer }} twerthi/octopub-${{ inputs.service_directory }}-mysql:latest
-        docker push twerthi/octopub-${{ inputs.service_directory }}-mysql:latest
+        docker build -f src/main/docker/Dockerfile.legacy-jar -t ATGardner/octopub-${{ inputs.service_directory }}-mysql:${{ steps.determine_version.outputs.semVer }} .
+        docker push ATGardner/octopub-${{ inputs.service_directory }}-mysql:${{ steps.determine_version.outputs.semVer }}
+        docker tag  ATGardner/octopub-${{ inputs.service_directory }}-mysql:${{ steps.determine_version.outputs.semVer }} ATGardner/octopub-${{ inputs.service_directory }}-mysql:latest
+        docker push ATGardner/octopub-${{ inputs.service_directory }}-mysql:latest
       shell: bash
       working-directory: java/${{ inputs.service_directory }}
 
@@ -209,7 +209,7 @@ runs:
       uses: OctopusDeploy/push-build-information-action@v3
       with:
         packages: |
-          twerthi/octopub-${{ inputs.service_directory }}-mysql
+          ATGardner/octopub-${{ inputs.service_directory }}-mysql
         version: ${{ steps.determine_version.outputs.semVer }}
         server: ${{ inputs.octopus_server_url }}
         api_Key: ${{ inputs.octopus_api_key }}

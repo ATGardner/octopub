@@ -42,11 +42,11 @@ configMapGenerator:
 
 images:
   - name: octopussamples/octopub-audit-microservice-mysql
-    newName: twerthi/octopub-audit-microservice-mysql
+    newName: ATGardner/octopub-audit-microservice-mysql
     newTag: 0.1.92
   - name: octopussamples/octopub-products-microservice-mysql
-    newName: twerthi/octopub-products-microservice-mysql
+    newName: ATGardner/octopub-products-microservice-mysql
     newTag: 0.1.92
   - name: octopussamples/octopub-frontend
-    newName: twerthi/octopub-frontend
+    newName: ATGardner/octopub-frontend
     newTag: 0.1.71
